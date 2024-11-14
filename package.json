@@ -9,6 +9,7 @@
     "lint": "next lint",
     "db:push": "npx drizzle-kit push",
     "db:studio": "npx drizzle-kit studio"
+
   },
   "dependencies": {
     "@clerk/nextjs": "^5.5.1",
