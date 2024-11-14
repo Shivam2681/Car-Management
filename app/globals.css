@@ -90,3 +90,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+}

@@ -29,11 +29,19 @@ export default function Page() {
         </a>
 
         <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-          Welcome to JobPrep AI
+          Welcome to Car Management
         </h2>
 
         <p className="mt-4 leading-relaxed text-white/90">
-        Welcome to your AI-powered interview coach! Elevate your preparation with personalized feedback, real-time analysis, and expert insights—designed to help you ace your next interview with confidence.
+        Key Features:
+
+1. **Comprehensive Inventory**: Track and manage all your vehicles in one centralized platform.
+2. **Maintenance Scheduling**: Set reminders and monitor service schedules to keep your cars running smoothly.
+3. **Detailed Analytics**: Generate reports and insights to optimize your fleet's performance and costs.
+4. **Intuitive Dashboard**: Access all your car data and management tools in a user-friendly interface.
+5. **Collaborative Features**: Invite team members and assign roles for efficient fleet management.
+
+Get started today and take control of your car fleet!
         </p>
       </div>
     </section>
