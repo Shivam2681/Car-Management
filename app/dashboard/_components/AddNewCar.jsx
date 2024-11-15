@@ -44,7 +44,6 @@ function AddNewCar() {
         return
       }
       
-      // Validate file types and sizes
       const validFiles = files.filter(file => {
         const isValidType = ['image/jpeg', 'image/png', 'image/webp'].includes(file.type)
         const isValidSize = file.size <= 5 * 1024 * 1024 // 5MB limit
@@ -55,13 +54,10 @@ function AddNewCar() {
         setError('Some files were skipped. Please ensure all files are images (JPEG, PNG, WebP) under 5MB.')
       }
 
-      // Process valid files
       const processedImages = await Promise.all(
         validFiles.map(async (file) => {
-          // Create preview URL for display
+      
           const preview = URL.createObjectURL(file)
-          
-          // Convert to base64
           const base64String = await convertToBase64(file)
           
           return {
@@ -113,13 +109,11 @@ function AddNewCar() {
       setError('')
 
       try {
-        // Prepare images data for storage
         const imagesData = images.map(img => ({
           data: img.base64,
           type: img.type
         }))
         
-        // Insert the car record with all data
         const [carRecord] = await db.insert(CarModel)
           .values({
             modelName,

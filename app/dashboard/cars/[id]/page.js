@@ -36,7 +36,6 @@ async function CarDetails({ params }) {
 
       <Card className="max-w-4xl mx-auto">
         <CardContent className="p-6">
-          {/* Header Section */}
           <div className="mb-8">
             <h1 className="text-3xl font-bold mb-2">{car.carName}</h1>
             <h2 className="text-xl text-muted-foreground mb-4">{car.modelName}</h2>
@@ -50,9 +49,8 @@ async function CarDetails({ params }) {
             </div>
           </div>
 
-          {/* Images Section */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-4">Gallery</h3>
+            <h3 className="text-xl font-semibold mb-4">Images</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {car.images.map((image, index) => (
                 <div key={index} className="relative aspect-square">
@@ -67,7 +65,6 @@ async function CarDetails({ params }) {
             </div>
           </div>
 
-          {/* Description Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Description</h3>
             <div className="prose max-w-none">

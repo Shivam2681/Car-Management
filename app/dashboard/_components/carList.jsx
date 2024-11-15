@@ -32,7 +32,6 @@ const CarList = () => {
         orderBy: (cars, { desc }) => [desc(cars.createdAt)]
       })
 
-      // Process the results to parse JSON strings
       const processedResults = result.map(car => ({
         ...car,
         tags: JSON.parse(car.tags || '[]'),
@@ -51,7 +50,6 @@ const CarList = () => {
     if (confirm('Are you sure you want to delete this car?')) {
       try {
         await db.delete(CarModel).where(eq(CarModel.id, carId))
-        // Refresh the list after deletion
         fetchCars(searchQuery)
       } catch (error) {
         console.error('Error deleting car:', error)
@@ -147,7 +145,7 @@ const CarList = () => {
           </Button>
         </Link>
         <div className="flex gap-2">
-          <Link href={`/dashboard/${car.id}/edit`}>
+          <Link href={`/dashboard/cars/${car.id}/edit`}>
             <Button variant="ghost" size="icon" className="text-primary hover:bg-primary-100 transition-transform duration-500 ease-in-out hover:scale-110">
               <Pencil className="h-5 w-5" />
             </Button>
