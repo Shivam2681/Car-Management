@@ -12,8 +12,12 @@ function Header() {
   },[])
   return (
     <div className='flex p-2 items-center justify-between bg-secondary shadow-md'>
-      <Image src={'/logo.svg'} width={100} height={100} alt='logo' />
-      <ul className='hidden md:flex gap-6'>
+      <div className='flex'>
+      <Image src={'/logo.svg'} width={50} height={100} alt='logo' />
+      <span className=" text-2xl p-2 font-bold">FleetManager</span>
+      </div>
+      
+      <ul className=' hidden md:flex gap-6'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
         ${path =='/dashboard' && 'text-primary font-bold'}`}>Dashboard</li>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
@@ -23,7 +27,9 @@ function Header() {
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
         ${path =='/dasboard/How it works? ' && 'text-primary font-bold'}`}>How it works?</li>
       </ul>
+      <div className='pr-2'>
       <UserButton/>
+      </div>
     </div>
   )
 }
